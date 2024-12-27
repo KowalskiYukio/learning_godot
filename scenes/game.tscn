@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhomw6i1kp1j8"]
+[gd_scene load_steps=15 format=3 uid="uid://dhomw6i1kp1j8"]
 
 [ext_resource type="PackedScene" uid="uid://dh5ke0plggnq6" path="res://scenes/player.tscn" id="1_44t00"]
 [ext_resource type="Texture2D" uid="uid://duw0cnehy42pe" path="res://assets/sprites/world_tileset.png" id="1_axc13"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_hvsry"]
 [ext_resource type="PackedScene" uid="uid://dqgqi1gc408br" path="res://scenes/platform.tscn" id="3_lsojs"]
 [ext_resource type="PackedScene" uid="uid://d3sfr83x8ilp2" path="res://scenes/coin.tscn" id="4_i1qi5"]
 [ext_resource type="PackedScene" uid="uid://41l0ifb7jg6s" path="res://scenes/killzone.tscn" id="5_6td3i"]
@@ -215,6 +216,10 @@ _data = {
 }
 
 [node name="Game" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_hvsry")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(151, 1)
