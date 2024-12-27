@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhomw6i1kp1j8"]
+[gd_scene load_steps=14 format=3 uid="uid://dhomw6i1kp1j8"]
 
 [ext_resource type="PackedScene" uid="uid://dh5ke0plggnq6" path="res://scenes/player.tscn" id="1_44t00"]
 [ext_resource type="Texture2D" uid="uid://duw0cnehy42pe" path="res://assets/sprites/world_tileset.png" id="1_axc13"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3sfr83x8ilp2" path="res://scenes/coin.tscn" id="4_i1qi5"]
 [ext_resource type="PackedScene" uid="uid://41l0ifb7jg6s" path="res://scenes/killzone.tscn" id="5_6td3i"]
 [ext_resource type="PackedScene" uid="uid://bq2u2qpvficow" path="res://scenes/slime.tscn" id="6_47i0s"]
+[ext_resource type="FontFile" uid="uid://cj5xoo272gwan" path="res://assets/fonts/PixelOperator8.ttf" id="7_s7imr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b7i5b"]
 texture = ExtResource("1_axc13")
@@ -309,3 +310,38 @@ position = Vector2(252, 33)
 
 [node name="Slime2" parent="." instance=ExtResource("6_47i0s")]
 position = Vector2(-88, 49)
+
+[node name="Label" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 1.0
+offset_top = -39.0
+offset_right = 87.0
+offset_bottom = -31.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_s7imr")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump"
+
+[node name="Label2" type="Label" parent="Label"]
+offset_left = 353.0
+offset_top = -23.0
+offset_right = 444.0
+offset_bottom = -15.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_s7imr")
+theme_override_font_sizes/font_size = 8
+text = "Don't fall here"
+
+[node name="Label3" type="Label" parent="Label"]
+offset_left = 132.0
+offset_top = -242.0
+offset_right = 244.0
+offset_bottom = -234.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.0117647, 0.14902, 0.34902, 1)
+theme_override_fonts/font = ExtResource("7_s7imr")
+theme_override_font_sizes/font_size = 8
+text = "Is that loot I see?"
